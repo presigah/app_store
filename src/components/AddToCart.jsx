@@ -4,7 +4,7 @@ const AddToCart = (props) => {
     const { product } = props;
     const { addProductToCart } = props;
     return (
-        <button onClick={() => addProductToCart(product)}>Add To cart</button>
+        <button className='border border-secondary' onClick={() => addProductToCart(product)}>Add To cart</button>
     );
 };
 

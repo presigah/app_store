@@ -3,6 +3,7 @@ import Products from './data/Products'
 import ProductList from './components/ProductList'
 import CarrList from './components/CartList';
 import Summary from './components/Summary';
+import Header from './components/Header';
 import { useState } from 'react';
 
 function App() {
@@ -10,17 +11,19 @@ function App() {
   const [totalProducts, setTotalProducts] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const updateTotalProducts = (cant) =>{
+  const updateTotalProducts = (cant) => {
     setTotalProducts(totalProducts + cant)
   }
 
-  const updateTotalPrice = (cant) =>{
+  const updateTotalPrice = (cant) => {
     setTotalPrice(totalPrice + cant)
   }
 
   return (
-    <div>
-      <h1>TotalProductos: {totalProducts}</h1>
+    <div className='container' style={{ marginTop: '20px' }}>
+      <Header
+        totalProducts={totalProducts}
+      />
       <ProductList
         products={Products}
         cartProducts={cartProducts}
@@ -28,20 +31,23 @@ function App() {
         updateTotalProducts={updateTotalProducts}
         updateTotalPrice={updateTotalPrice}
       />
-      <hr/>
-      <hr/>
-      <hr/>
-      <hr/>
-      <CarrList 
-        cartProducts = {cartProducts}
-        setCartProducts={setCartProducts}
-        updateTotalProducts={updateTotalProducts}
-        updateTotalPrice={updateTotalPrice}
-      />
-      <Summary 
-        totalPrice={totalPrice}
-        updateTotalPrice={updateTotalPrice}        
-      />
+      <hr />
+      <div className="row">
+        <div className="col-7">
+          <CarrList
+            cartProducts={cartProducts}
+            setCartProducts={setCartProducts}
+            updateTotalProducts={updateTotalProducts}
+            updateTotalPrice={updateTotalPrice}
+          />
+        </div>
+        <div className="col-5">
+          <Summary
+            totalPrice={totalPrice}
+            updateTotalPrice={updateTotalPrice}
+          />
+        </div>
+      </div>
     </div>
   )
 }

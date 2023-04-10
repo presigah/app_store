@@ -9,8 +9,10 @@ const ProductList = (props) => {
     const { updateTotalPrice } = props;
 
     return (
-        <div>
+        <div className='container'>
+            <div className="row">
             {products.map((product) => (
+                <div className="col-6 col-mb-4 " key={product.id}>
                 <ProductItem
                     key={product.id}
                     product={product}
@@ -19,7 +21,9 @@ const ProductList = (props) => {
                     updateTotalProducts={updateTotalProducts}
                     updateTotalPrice={updateTotalPrice}
                 />
+                </div>
             ))}
+            </div>
         </div>
     );
 };

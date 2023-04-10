@@ -7,7 +7,9 @@ const CarList = (props) => {
     const { updateTotalProducts } = props;
     const { updateTotalPrice } = props;
     return (
-        <div>
+        <div className='container'>
+            <h3>Shopping Cart</h3>
+            <hr />
             {cartProducts.map((cartProduct) => (
                 <CartItem
                     key={cartProduct.id}

@@ -1,12 +1,8 @@
 const Products = [
-    { id: 1, nombre: "Runfalcon", precio: 233000, cantidad: 5, descripcion: "Chimba de pisos 1", img: "./img/pisos1.png" },
-    { id: 2, nombre: "Forum Low", precio: 422000, cantidad: 3, descripcion: "Chimba de pisos 2", img: "./img/pisos2.png" },
-    { id: 3, nombre: "Fluidstreet", precio: 305000, cantidad: 4, descripcion: "Chimba de pisos 3", img: "./img/pisos3.png" },
-    { id: 4, nombre: "Hoops 2.0 Mid", precio: 233000, cantidad: 2, descripcion: "Chimba de pisos 4", img: "./img/pisos4.png" },
-    { id: 5, nombre: "Terrex AX3", precio: 359000, cantidad: 6, descripcion: "Chimba de pisos 5", img: "./img/pisos5.png" },
-    { id: 6, nombre: "Duramo SL", precio: 269000, cantidad: 3, descripcion: "Chimba de pisos 6", img: "./img/pisos6.png" },
-    { id: 7, nombre: "Advantage Base", precio: 191000, cantidad: 4, descripcion: "Chimba de pisos 7", img: "./img/pisos7.png" },
-    { id: 8, nombre: "Galaxar Run", precio: 332000, cantidad: 2, descripcion: "Chimba de pisos 8", img: "./img/pisos8.png" },
+    { id: 1, nombre: "Nike Dunk High Retro", precio: 120, cantidad: 5, descripcion: "Really good Nike shoes", img: "src\\img\\dunk_high_retro.jpg" },
+    { id: 2, nombre: "Nike Zoom Fly 5", precio: 150, cantidad: 3, descripcion: "Good Nike shoes", img: "src\\img\\nike_zoom_fly.jpg" },
+    { id: 3, nombre: "Nike Streetgato", precio: 180, cantidad: 2, descripcion: "Really good Nike shoes", img: "src\\img\\nike_streetgato.jpg" },
+    { id: 4, nombre: "Zoom Freak 4", precio: 150, cantidad: 3, descripcion: "Really good Nike shoes", img: "src\\img\\zoom_freak_4.jpg" },
 ];
 
 export default Products;

@@ -29,18 +29,25 @@ const ProductItem = (props) => {
     }
 
     return (
-        <div>
-            <h2>{product.nombre}</h2>
-            <p>{product.descripcion}</p>
-            <p>{product.precio}</p>
-            <AddToCart
-                product={product}
-                addProductToCart={addProductToCart}
-            />
-            <ProductImage 
-                productImage={product.img}
-            />
-        </div>
+            <div className="card m-3" style={{ width: '540px'}}>
+                <div className="row g-0">
+                    <div className="col-md-4">
+                        <ProductImage
+                            productImage={product.img}
+                        />
+                    </div>
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            <h3 className="card-title">{product.nombre}</h3>
+                            <h3 className="card-text text-warning">$ {product.precio}</h3>
+                            <AddToCart
+                                product={product}
+                                addProductToCart={addProductToCart}
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
     );
 };
 

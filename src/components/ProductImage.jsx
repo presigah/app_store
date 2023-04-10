@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 const ProductImage = (props) => {
     const { productImage } = props;
     return(
-        <div> Imagen </div>
+        <img src={productImage} className="img-fluid rounded-start" alt="Product" style={{width: "300px", height: "210px"}}/>
     );
 };
 
