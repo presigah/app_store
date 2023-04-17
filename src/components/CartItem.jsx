@@ -22,7 +22,7 @@ const CartItem = (props) => {
     const handleDecrement = () => {
         if (cartProduct.cantProductos === 1) {
             DeleteProducto(cartProduct)
-            return
+            return null
         }
         const updatedProducts = cartProducts.map((cartItemProduct) =>
             cartProduct.id === cartItemProduct.id ? { ...cartProduct, cantProductos: cartProduct.cantProductos - 1 } : cartItemProduct
